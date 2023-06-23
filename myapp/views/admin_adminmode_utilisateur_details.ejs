@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WSNH - offer details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" sizes="16x16" type="image/png" href="https://th.bing.com/th/id/R.b10e96c930666f016df733b3d0708384?rik=8mEriFTINweOgQ&riu=http%3a%2f%2fwww.pngplay.com%2fwp-content%2fuploads%2f1%2fLetter-W-PNG-Stock-Photo.png&ehk=TaMIw3MiRv29LoFRD1wBx0E8Bgzb7lQI9PxejqN%2bDMk%3d&risl=&pid=ImgRaw&r=0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="p-5 bg-color text-white text-center">
+            <h1>WORK SMARTER/</h1>
+            <p>NOT HARDER</p> 
+        </div>
+    </header>
+
+<main>
+    <nav class="sticky-top navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/adminmode">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/admin/adminmode/liste_utilisateurs">Visualiser les utilisateurs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/adminmode/liste_organisations">Visualiser les organisations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/adminmode/demandes_adhesion">Demandes d'adhésion</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link button-important" href="/admin">Candidater</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/deconnexion">Déconnexion</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="fluid-container red-pannel border-top-0 border-bottom-0">
+		<h1 class="text-center"><%= utilisateur[0].nom %> <%= utilisateur[0].prenom %></h1>
+		<div class="row info-list-style space">
+			<div class="col p-3 bg-dark detail-offer">
+					<p class="text-white description">
+                        Identifiant : <%= utilisateur[0].id %>
+                    </p>
+                    <p class="text-white description">
+                        Email : <%= utilisateur[0].mail %>
+                    </p>
+                    <p class="text-white description">
+                        Téléphone : <%= utilisateur[0].tel %>
+                    </p>
+                    <p class="text-white description">
+                        L'utilisateur est un recruteur : <%= utilisateur[0].est_recruteur %>
+                    </p>
+                    <p class="text-white description">
+                        Organisation (peut être vide) : <%= utilisateur[0].organisation %>
+                    </p>
+                    <p class="text-white description">
+                        L'utilisateur est un administrateur : <%= utilisateur[0].est_admin %>
+                    </p>
+                    <p class="text-white description">
+                        Date de création du compte : <%= utilisateur[0].date_creation %>
+                    </p>
+                    <p class="text-white description">
+                        Statut du compte : <%= utilisateur[0].statut %>
+                    </p>
+					<div class="fluid-container bouton-candidater-encadre">
+						<div class="row info-list-style space text-center">
+							<div class="col p-3 bg-dark detail-offer">
+								<a class="text-white" href="/admin/adminmode/liste_utilisateurs/details/<%= utilisateur[0].id %>/modifier">Modifier</a>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+    </div>
+   
+</main>
+
+<footer>
+    <div class="p-4 bg-dark text-white text-center">
+        <p>SR10 - Oriane LANFRANCHI & William SCHENTEN</p>
+    </div>
+</footer>
+
+</body>
+</html>

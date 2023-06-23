@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WSNH - document required for offer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" sizes="16x16" type="image/png" href="https://th.bing.com/th/id/R.b10e96c930666f016df733b3d0708384?rik=8mEriFTINweOgQ&riu=http%3a%2f%2fwww.pngplay.com%2fwp-content%2fuploads%2f1%2fLetter-W-PNG-Stock-Photo.png&ehk=TaMIw3MiRv29LoFRD1wBx0E8Bgzb7lQI9PxejqN%2bDMk%3d&risl=&pid=ImgRaw&r=0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="p-5 bg-color text-white text-center">
+            <h1>WORK SMARTER/</h1>
+            <p>NOT HARDER</p> 
+        </div>
+    </header>
+
+<main>
+    <nav class="sticky-top navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/recruiter">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/recruiter/liste_offres">Chercher des offres</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/recruiter/mes_candidatures">Mes Candidatures</a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link button-important" href="/recruiter/recruitermode">Recruter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/deconnexion">Déconnexion</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="fluid-container red-pannel border-top-0 border-bottom-0">
+		<h1 class="text-center"><%= offre[0].titre %> - <%= offre[0].nom %></h1>
+		<div class="row info-list-style space">
+			<div class="col p-3 bg-dark detail-offer">
+				<form  action="/recruiter/liste_offres/details/<%= offre[0].id %>/candidater/upload_files" method="POST" enctype="multipart/form-data"><!--  #TODO -->
+					<!--CV-->
+					<div class="row info-list-style space">
+						<h2 class="text-white">CV</h2>
+						<div class="col bg-white info-list-bdr8-1">
+							<span class="text-black">
+									<a href="upload/" target="_blank">
+										Visualiser le document
+									</a>
+							</span>
+						</div>
+						<div class="col container-ajout text-center">
+								<label class="button-ajout" for="upload1">Ajouter</label>
+								<input type="file" accept=".pdf" name="cv" id="upload1" type="file" required multiple> <!-- multiple onchange-->
+						</div>
+					</div>
+					<!--Lettre de motivation-->
+
+					<div class="row info-list-style space">
+						<h2 class="text-white">Lettre de motivation</h2>
+						<div class="col bg-white info-list-bdr8-1">
+							<span class="text-black">Visualiser le document</span>
+						</div>
+						<div class="col container-ajout text-center">
+								<label class="button-ajout" for="upload2">Ajouter</label>
+								<input type="file" accept=".pdf" name="lettre_motivation" id="upload2" type="file" required multiple>
+						</div>
+					</div>
+					<!--Pièce d'identité-->
+					<div class="row info-list-style space">
+						<h2 class="text-white">Pièce d'identité</h2>
+						<div class="col bg-white info-list-bdr8-1">
+							<span class="text-black">Visualiser le document</span>
+						</div>
+						<div class="col container-ajout text-center">
+								<label class="button-ajout" for="upload3">Ajouter</label>
+								<input type="file" accept=".jpeg,.png" name="pid" id="upload3" type="file" required multiple>
+						</div>
+					</div>
+					<!--bouton envoyer-->
+					<div class="fluid-container bouton-candidater-encadre">
+						<div class="row info-list-style space text-center">
+							<div class="col p-3 bg-dark detail-offer">
+								<input class="text-white bg-dark" type="submit" id="SubmitForm">
+							</div> 
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+    </div>
+   
+</main>
+
+<footer>
+    <div class="p-4 bg-dark text-white text-center">
+        <p>SR10 - Oriane LANFRANCHI & William SCHENTEN</p>
+    </div>
+</footer>
+
+</body>
+</html>

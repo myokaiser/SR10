@@ -1,0 +1,153 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+.space:before { 
+    content: "\00a0";
+    padding-right: 5px; /* If you need more space between contents */
+}
+
+.space:after { 
+    content: "\00a0";
+    padding-right: 5px; /* If you need more space between contents */
+}
+
+.bg-color {
+    background-color:#D6594A;
+}
+
+.button-important {
+    background-color:#8E8D8D;
+    color: white;
+    border-radius: 8px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.huge-banner {
+    padding: 150px;
+    background-color: #1F1F20;
+}
+
+.red-pannel {
+    border: 3rem solid;
+    border-color: #D6594A;
+}
+
+.button {
+    background-color: #D6594A;
+    border-radius: 8px;
+    padding: 40px 30px;
+}
+
+.button:hover {
+    background-color: #E2C0BD;
+    border-radius: 8px;
+}
+
+.button-important:hover {
+    background-color:#B7B7B7;
+}
+
+.form-text-input {
+    padding : 10px 20px;
+}
+
+.info-list-style {
+    padding : 25px;
+    border-radius: 8px;
+}
+
+.info-list-style-button {
+    background-color: #D6594A;
+    vertical-align: middle;
+}
+
+.info-list-style-button:hover {
+    background-color: #E2C0BD;
+}
+
+.info-list-bdr8-1 {
+    border-top-left-radius : 8px;
+    border-bottom-left-radius : 8px;
+	flex: 5 0 0;
+}
+
+.info-list-bdr8-default {
+    border-top-left-radius : 8px;
+    border-bottom-left-radius : 8px;
+}
+
+.info-list-bdr8-2 {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius : 8px;
+	flex: 1 0 0;
+}
+
+.detail-offer {
+    border-top-left-radius : 8px;
+    border-bottom-left-radius : 8px;
+	border-top-right-radius : 8px;
+    border-bottom-right-radius : 8px;
+}
+
+.description{
+	width : 65%;
+}
+
+.bouton-candidater-encadre{
+    border-top-left-radius : 8px;
+    border-bottom-left-radius : 8px;
+	border-top-right-radius : 8px;
+    border-bottom-right-radius : 8px;
+	background : white;
+	position : relative;
+	float : bottom;
+	width : 20%;
+	margin : 10px;
+	float : right;
+	bottom : 0%;
+}
+ 
+ .container-ajout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+}
+
+.button-ajout {
+	display: inline-block;
+	padding: 12px 18px;
+	cursor: pointer;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius : 8px;
+	background-color: #D6594A;
+	font-weight: bold;
+	color: #FFF;
+	flex: 1 0 0;
+}
+
+.search-btn {
+    border-color: #D6594A;
+    color: #D6594A;
+}
+
+.search-btn:hover {
+    background: #D6594A;
+    color: white;
+}
+
+  
